@@ -1,11 +1,9 @@
 
-from flask import Flask,render_template
 import xkcd
 import os
-from app import app
 
 
-def getComicNum(number):
+def getComicNum(number): #return comic and download to specific location (identified by number)
     Comic = xkcd.getComic(number, False)
     location = os.path.dirname(os.path.abspath(__file__)) + "/static/images/"
     name = str(number) + ".png"
