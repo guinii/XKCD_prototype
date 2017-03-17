@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Comics of XKCD</title>
+    </head>
+    <body>
+
+        <h1> {{ titleComic }}!</h1>
+        <div>
+            <img src= {{ url_for('static' ,filename = namePhoto) }}>
+        </div>
+        <div>
+            <a href="{{linkToComic}}"><button type="button"border-radius: 8px;>Link to the commic</button></a>
+            <a href="{{ url_for('next')}}"><button type="button">Next</button></a>
+            <a href="{{ url_for('random') }}"><button type="button">Random</button></a>
+            <a href="{{ url_for('before') }}"><button type="button">Before</button></a>
+        </div>
+
+    </body>
+</html>
